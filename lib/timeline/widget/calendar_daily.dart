@@ -31,7 +31,7 @@ class CalendarDaily extends StatelessWidget {
     executeAsync(context);
     // Yearly , Monthly , Weekly and Daily calendar
     return Container(
-      margin: const EdgeInsets.only(left: 15, right: 15),
+      padding: const EdgeInsets.only(left: 1, right: 1),
       decoration: BoxDecoration(
           color: Colors.white, borderRadius: BorderRadius.circular(6.0)),
       height: DayOptions.of(context).showWeekDay

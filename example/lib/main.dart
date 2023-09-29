@@ -66,7 +66,11 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: <Widget>[
+
+          SizedBox(height: 50,),
+
           _timelineCalendar(),
+
         ],
       ),
     );

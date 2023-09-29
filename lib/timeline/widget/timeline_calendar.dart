@@ -97,45 +97,45 @@ class _TimelineCalendarState extends State<TimelineCalendar> {
               elevation: CalendarOptions.of(context).headerMonthElevation,
               child: Column(
                 children: [
-                  Header(
-                    onDateTimeReset: () {
-                      widget.onDateTimeReset?.call(TimelineCalendar.dateTime!);
-                      setState(() {});
-                    },
-                    onMonthChanged: (int selectedMonth) {
-                      //Interchange below 2 lines for getting latest selected date in v1.0.6
-                      CalendarUtils.goToMonth(selectedMonth);
-                      if (isEventCalled(context)) {
-                        widget.onMonthChanged?.call(TimelineCalendar.dateTime!);
-                      }
-                      setState(() {});
-                    },
-                    onViewTypeChanged: (ViewType viewType) {
-                      setState(() {});
-                      widget.onChangeViewType?.call(viewType);
-                    },
-                    onYearChanged: (int selectedYear) {
-                      //Interchange below 2 lines for getting latest selected date in v1.0.6
-                      CalendarUtils.goToYear(selectedYear);
-                      if (isEventCalled(context)) {
-                        widget.onYearChanged?.call(TimelineCalendar.dateTime!);
-                      }
-                      setState(() {});
-                    },
-                  ),
+                  // Header(
+                  //   onDateTimeReset: () {
+                  //     widget.onDateTimeReset?.call(TimelineCalendar.dateTime!);
+                  //     setState(() {});
+                  //   },
+                  //   onMonthChanged: (int selectedMonth) {
+                  //     //Interchange below 2 lines for getting latest selected date in v1.0.6
+                  //     CalendarUtils.goToMonth(selectedMonth);
+                  //     if (isEventCalled(context)) {
+                  //       widget.onMonthChanged?.call(TimelineCalendar.dateTime!);
+                  //     }
+                  //     setState(() {});
+                  //   },
+                  //   onViewTypeChanged: (ViewType viewType) {
+                  //     setState(() {});
+                  //     widget.onChangeViewType?.call(viewType);
+                  //   },
+                  //   onYearChanged: (int selectedYear) {
+                  //     //Interchange below 2 lines for getting latest selected date in v1.0.6
+                  //     CalendarUtils.goToYear(selectedYear);
+                  //     if (isEventCalled(context)) {
+                  //       widget.onYearChanged?.call(TimelineCalendar.dateTime!);
+                  //     }
+                  //     setState(() {});
+                  //   },
+                  // ),
                   isMonthlyView()
                       ? Container(
                           color: Colors.transparent,
                           child: Stack(
                             children: [
-                              Padding(
-                                padding: const EdgeInsets.all(0.0),
-                                child: Container(
-                                  color:
-                                      HeaderOptions.of(context).backgroundColor,
-                                  height: 150,
-                                ),
-                              ),
+                              // Padding(
+                              //   padding: const EdgeInsets.all(0.0),
+                              //   child: Container(
+                              //     color:
+                              //         HeaderOptions.of(context).backgroundColor,
+                              //     height: 150,
+                              //   ),
+                              // ),
                               CalendarMonthly(onCalendarChanged: () {
                                 widget.onChangeDateTime
                                     ?.call(TimelineCalendar.dateTime!);
@@ -149,14 +149,14 @@ class _TimelineCalendarState extends State<TimelineCalendar> {
                           color: Colors.transparent,
                           child: Stack(
                             children: [
-                              Padding(
-                                padding: const EdgeInsets.all(0.0),
-                                child: Container(
-                                  height: 40,
-                                  color:
-                                      HeaderOptions.of(context).backgroundColor,
-                                ),
-                              ),
+                              // Padding(
+                              //   padding: const EdgeInsets.all(0.0),
+                              //   child: Container(
+                              //     height: 40,
+                              //     color:
+                              //         HeaderOptions.of(context).backgroundColor,
+                              //   ),
+                              // ),
                               CalendarDaily(onCalendarChanged: () {
                                 widget.onChangeDateTime
                                     ?.call(TimelineCalendar.dateTime!);
